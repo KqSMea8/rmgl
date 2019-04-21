@@ -1,0 +1,21 @@
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.contactor-info {
+  padding-left: 30rpx;
+}
+
+.contact-button {
+  margin-top: 20rpx;
+  width: 20%;
+  height: 50rpx;
+  border-radius: 5rpx;
+  background-color: #3B79FF;
+  font-size: 25rpx;
+  color: white;
+  line-height: 50rpx;
+  text-align: center;
+}

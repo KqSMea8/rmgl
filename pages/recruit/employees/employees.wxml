@@ -1,0 +1,47 @@
+<wxs src="../../../utils/subutil.wxs" module="tools"/>
+<scroll-view>
+<view style="display: flex; padding: 15px 20px">
+  <image class='supplierImg' src='{{img}}'></image>
+  <view class="job-info" style="width: 60%">
+    <view style='font-size:30rpx;color: black; font-weight: 700' class='lineContainer'>{{name}}</view>
+    <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{companyName}} | {{companyStatus}} | {{workerNum}}</view>
+    <view style="font-size: 22rpx;color: #6B6B6B">{{position}} {{education}} {{experience}}</view>
+  </view>
+  <view class="job-salary">
+    <text style="font-size: 30rpx;color: #FE7200">{{salary}}</text>
+  </view>
+</view>
+<view class="division"/>
+<view style="display: flex; padding: 15px 20px">
+  <image class='contactorImg' src='{{contactorImg}}'></image>
+  <view class="contactor-info" style="width: 65%">
+    <view style='font-size: 28rpx;color: black; font-weight: 600' class='lineContainer'>{{person}}</view>
+    <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{identity}}</view>
+    <view style="font-size: 22rpx;color: #6B6B6B">平均4小时回复 回复率100%</view>
+  </view>
+  <view class="contact-button">
+    沟通职位
+  </view>
+</view>
+<view class="division"/>
+<view class="job-detail" style="display: flex;flex-direction: column;padding: 15px 20px">
+  <view style='font-size: 28rpx;color: black;font-weight: 600;line-height:80rpx'>职位亮点</view>
+  <view style="font-size: 22rpx;color: #6B6B6B">项目管理，快速发展的业务，重要项目的历练机会</view>
+  <view style='font-size: 28rpx;color: black;font-weight: 600;line-height:100rpx'>职位描述</view>
+  <view style='font-size: 22rpx;color: #6B6B6B;display: flex;flex-direction: column;line-height: 35rpx;'>
+  <text>岗位职责</text>
+  <text>负责金融产品相关系统架构规划、设计，深入理解业务架构和需求，识别系统风险，能设计可扩展、高可用、高性能、稳定安全的系统；</text>
+  <text>负责完成重要业务模块以及核心框架的搭建及编码实现；负责系统整体相关架构和技术规划质量控制，主导团队技术方案评审等工作；</text>
+  <text>对新技术快速学习推广，提高团队技术能力，打造战斗力强的技术团队</text>
+  <text>任职要求</text>
+  <text>Java基础扎实，熟练掌握数据结构、多线程编程，掌握常用的设计模式</text>
+  <text>精通Web编程，精通Spring MVC、ORM框架(MyBatis或Hibernate)，熟悉前端开发(JavaScript、HTML、CSS);</text>
+  <text>熟练掌握后端技术并能根据业务场景做好技术选型，例如负载均衡、弹性扩容、微服务、缓存、分布式存储、分布式事务、消息中间件、RPC框架等；</text>
+  <text>精通高并发、分布式系统设计、对JVM、数据库性能优化有独到见解；</text>
+  <text>主导完成过大型互联网产品或者金融产品后端服务，在性能优化方面有突出案例</text>
+  </view>
+</view>
+</scroll-view>
+<view class="bottom-bar">
+  <view class="bottom-contact-button">沟通职位</view>
+</view>

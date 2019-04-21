@@ -1,0 +1,7 @@
+<import src="/templates/jobCard2/jobCard2" />
+
+<scroll-view scroll-y='true'  style='height:{{windowHeight-100}}rpx' bindscrolltolower="loadSupplier" lower-threshold="30">
+  <view class="title"> 已发布的职位</view>
+  <view style="height: 1px; background-color:#eeeef3;"/>
+  <template is="jobCard2" wx:for="{{jobs}}" wx:key="key" data="{{...item}}"></template>
+</scroll-view>   

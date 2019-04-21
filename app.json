@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/personal/personal",
+    "pages/recruit/recruit",
+
+    "pages/jobDetail/jobDetail",
+    "pages/job/job",
+    "pages/homepage/homepage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/recruit/employees/employees"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3B79FF",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#FE5400",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "resources/images/tabBar/homepage0.png",
+        "selectedIconPath": "resources/images/tabBar/homepage1.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人",
+        "iconPath": "resources/images/tabBar/personal0.png",
+        "selectedIconPath": "resources/images/tabBar/personal1.png"
+      }
+    ]
+  }
+}

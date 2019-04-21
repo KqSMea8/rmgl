@@ -1,0 +1,49 @@
+@import "/templates/jobCard/jobCard.wxss";
+.division {
+  margin: 0px 30rpx;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+
+.contactorImg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.contactor-info {
+  padding-left: 30rpx;
+}
+
+.contact-button {
+  margin-top: 20rpx;
+  width: 20%;
+  height: 50rpx;
+  border-radius: 5rpx;
+  background-color: #3B79FF;
+  font-size: 25rpx;
+  color: white;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.bottom-bar {
+  position: fixed;
+  height: 100rpx;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+}
+
+.bottom-contact-button {
+  height: 90rpx;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5rpx;
+  background-color: #3B79FF;
+  font-size: 35rpx;
+  color: white;
+  line-height: 90rpx;
+  text-align: center;
+}
+

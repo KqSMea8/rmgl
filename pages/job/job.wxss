@@ -1,0 +1,2 @@
+@import '/templates/searchBox/searchBox.wxss';
+@import '/templates/jobCard/jobCard.wxss'

@@ -1,0 +1,23 @@
+<template name='jobCard'>
+  <wxs src="../../utils/subutil.wxs" module="tools"/>
+  <view class='part' bindtap='goToDetail'>
+    <view class='subPart'>
+      <view style="display: flex; padding: 15px 0px">
+        <image class='supplierImg' src='{{img}}'></image>
+        <view class="job-info">
+          <view style='font-size:30rpx;color: black' class='lineContainer'>{{tools.sub2(name,8)}}</view>
+          <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{companyName}} | {{companyStatus}} | {{workerNum}}</view>
+          <view style="font-size: 22rpx;color: #6B6B6B">{{position}} {{education}} {{experience}}</view>
+        </view>
+        <view class="job-salary">
+          <text style="font-size: 30rpx;color: #FE7200">{{salary}}</text>
+        </view>
+      </view>
+      <view style="height: 1px; background-color:#F6F6F6"/>
+      <view style="padding-top: 10rpx" class='lineContainer'>
+        <view style="font-size: 22rpx;color: #6B6B6B">{{person}} | {{identity}}</view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 10px; background-color:#eeeef3;"/>
+</template>

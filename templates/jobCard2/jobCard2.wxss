@@ -1,0 +1,72 @@
+
+.part{
+  padding:20rpx;
+
+
+}
+
+.contact-button {
+  margin-top: 20rpx;
+  width: 20%;
+  height: 50rpx;
+  border-radius: 5rpx;
+  background-color: #3B79FF;
+  font-size: 25rpx;
+  color: white;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.subPart{
+  display: flex;
+  flex-direction: column;
+}
+
+.lineContainer{
+  font-size:26rpx;
+  display: flex;
+  align-items: center;
+  color: #2b2b2b
+}
+
+.what{
+  color:#8b8b8b
+}
+
+.job-info {
+  padding-top: 10rpx;
+  width: 60%;
+}
+
+.supplierImg {
+  width:120rpx;
+  height:120rpx;
+  margin-right:20rpx;
+  border-radius:10rpx;
+}
+
+.itemImg {
+  width: 225rpx;
+  height: 225rpx;
+  border-radius:10rpx;
+}
+
+.items {
+  display:flex;
+  justify-content:space-between;
+  margin-top:10rpx;
+}
+
+.labels view {
+  background:#f8f8f8;
+  color:grey;
+  font-size:23rpx;
+  padding:5rpx 35rpx;
+  margin:0 5rpx;
+  border-radius:30rpx;
+  font-weight:400;
+}
+
+.labels {
+  margin:10rpx 0;
+}

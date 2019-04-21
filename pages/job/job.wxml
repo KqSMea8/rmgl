@@ -1,0 +1,12 @@
+<import src="/templates/jobCard/jobCard" />
+<view class="stickyHeader">
+  <view class="search_border">
+    <view class="search" bindtap="goToSearch">
+      <icon type='search' size='15'></icon>
+      <input placeholder="搜索职位/公司" style="padding-left: 10rpx;font-size: 25rpx;color: #6B6B6B"/>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y='true'  style='height:{{windowHeight-100}}rpx' bindscrolltolower="loadSupplier" lower-threshold="30">
+  <template is="jobCard" wx:for="{{jobs}}" wx:key="key" data="{{...item}}"></template>
+</scroll-view>   

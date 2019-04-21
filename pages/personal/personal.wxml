@@ -1,0 +1,43 @@
+<view class="profile">
+    <view class="avatar">
+        <image src="{{avatar}}"></image>
+    </view>
+    <view class="baseinfo">
+        {{name}}
+    </view>
+</view>
+
+<view class="ul ul-user">
+    <navigator class="li" hover-class="none" url="pages/friends/friends">
+        <view class="li-hd"></view>
+        <view class="li-bd">我的好友</view>
+        <view class="li-image"><image src="{{right}}"/></view>
+    </navigator>
+    <view class="division"/>
+    <navigator class="li" hover-class="none" url="/pages/job/job">
+        <view class="li-hd"></view>
+        <view class="li-bd">求职</view>
+        <view class="li-image"><image src="{{right}}"/></view>
+    </navigator>
+    <view class="division"/>
+        <navigator class="li" hover-class="none" url="/pages/recruit/recruit">
+        <view class="li-hd"></view>
+        <view class="li-bd">招聘</view>
+        <view class="li-image"><image src="{{right}}"/></view>
+    </navigator>
+    <view class="division"/>
+    <navigator class="li" hover-class="none" url="">
+        <view class="li-hd"></view>
+        <view class="li-bd">寻找中介</view>
+        <view class="li-image"><image src="{{right}}"/></view>
+    </navigator>
+    <view class="division"/>
+    <navigator class="li" hover-class="none" url="./setting/setting">
+        <view class="li-hd"></view>
+        <view class="li-bd">我的动态</view>
+        <view class="li-image"><image src="{{right}}"/></view>
+    </navigator>
+</view>
+
+
+

@@ -1,0 +1,14 @@
+<template name='personCard'>
+  <wxs src="../../utils/subutil.wxs" module="tools"/>
+  <view style="display: flex; padding: 15px 20px">
+    <image class='avatar' src='{{avatar}}'></image>
+    <view class="contactor-info" style="width: 65%">
+      <view style='font-size: 28rpx;color: black; font-weight: 600' class='lineContainer'>{{name}}</view>
+      <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{identity}}</view>
+      <view style="font-size: 22rpx;color: #6B6B6B">平均4小时回复 回复率100%</view>
+    </view>
+    <view class="contact-button">
+      沟通职位
+    </view>
+  </view>
+</template>
