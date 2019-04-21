@@ -1,14 +1,14 @@
 {
   "pages": [
+        "pages/homepage/homepage",
+    "pages/recruit/employees/employees",
     "pages/personal/personal",
     "pages/recruit/recruit",
 
     "pages/jobDetail/jobDetail",
     "pages/job/job",
-    "pages/homepage/homepage",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/recruit/employees/employees"
+
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

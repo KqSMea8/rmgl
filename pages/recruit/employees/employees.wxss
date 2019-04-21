@@ -1,4 +1,5 @@
 @import "/templates/jobCard/jobCard.wxss";
+@import "/templates/personCard/personCard.wxss";
 .division {
   margin: 0px 30rpx;
   height: 1px;
