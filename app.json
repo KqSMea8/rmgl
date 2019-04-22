@@ -1,6 +1,6 @@
 {
   "pages": [
-        "pages/homepage/homepage",
+    "pages/homepage/homepage",
     "pages/recruit/employees/employees",
     "pages/personal/personal",
     "pages/recruit/recruit",
@@ -23,7 +23,7 @@
     "list": [
       {
         "pagePath": "pages/homepage/homepage",
-        "text": "首页",
+        "text": "动态",
         "iconPath": "resources/images/tabBar/homepage0.png",
         "selectedIconPath": "resources/images/tabBar/homepage1.png"
       },

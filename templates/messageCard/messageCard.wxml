@@ -1,0 +1,20 @@
+<template name='messageCard'>
+  <wxs src="../../utils/subutil.wxs" module="tools"/>
+  <view style="display: flex; padding: 15px 20px 10px 20px">
+    <image class='avatar' src='{{avatar}}'></image>
+    <view class="contactor-info" style="width: 65%">
+      <view style='font-size: 28rpx;color: black; font-weight: 600' class='lineContainer'>{{name}}</view>
+      <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{skill}}</view>
+    </view>
+  </view>
+  <view style="display: flex; padding: 0px 20px">
+    <text style="font-size: 25rpx">{{tools.sub2(message,100)}}
+      <text style="position: relative; left: 80%; bottom: 20rpx; color: #3B79FF; " wx:if="{{message.length>100}}">全文</text>
+    </text>
+  </view>
+  <view class="buttons" style="font-weight: 400; display: flex; padding: 10px 40px; justify-content: space-between">
+    <view style="width: 100rpx"><image src="/resources/images/fenxiang.png"/>分享</view>
+    <view style="width: 100rpx"><image src="/resources/images/pinglun.png"/>{{commentNum}}</view>
+    <view style="width: 100rpx"><image src="/resources/images/zan.png"/>{{zanNum}}</view>
+  </view>
+</template>
