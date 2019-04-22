@@ -9,7 +9,7 @@
   </view>
   <view style="display: flex; padding: 0px 20px">
     <text style="font-size: 25rpx">{{tools.sub2(message,100)}}
-      <text style="position: relative; left: 80%; bottom: 20rpx; color: #3B79FF; " wx:if="{{message.length>100}}">全文</text>
+      <text style="position: relative; left: 80%; color: #3B79FF; " wx:if="{{message.length>100}}">全文</text>
     </text>
   </view>
   <view class="buttons" style="font-weight: 400; display: flex; padding: 10px 40px; justify-content: space-between">

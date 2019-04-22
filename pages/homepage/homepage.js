@@ -4,6 +4,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+      keyword: "Java",
       messages: [
         {
           name: "达得山",
@@ -31,77 +32,6 @@ Page({
       ],
     },
 
-    alert: function (e) {
-        const index = e.currentTarget.dataset.idx;
-        let _this = this;
-        wx.getStorage({
-          key: 'cart',
-          success(res) {
-            let cartItem = {};
-            cartItem.Items = [_this.data.goodItems[index]];
-            let cartItems = res.data;
-            cartItems.push(cartItem);
-            console.log(cartItems);
-            wx.setStorage({
-              key: 'cart',
-              data: cartItems,
-            })
-          },
-        })
-    },
-
-    infoChange: function(e) {
-      this.setData({
-        infoHidden: !this.data.infoHidden
-      })
-    },
-
-    toReg:function(){
-      wx.navigateTo({
-        url: '/pages/register/register',
-      })
-    },
-
-    scanTest: function (e) {
-      let _this = this
-      wx.scanCode({
-        success(res) {
-          if (res.scanType == "EAN_13")
-            wx.navigateTo({
-              url: '/pages/barcode/barcode?barcode='+res.result,
-            })
-          console.log(res.result)
-          console.log(res.charSet)
-          console.log(res.scanType)
-          // _this.setData({
-          //   infoHidden: false,
-          // })
-        }
-      })
-    },
-
-    takePhoto() {
-      const ctx = wx.createCameraContext()
-      ctx.takePhoto({
-        quality: 'high',
-        success: (res) => {
-          this.setData({
-            src: res.tempImagePath
-          })
-        }
-      })
-    },
-
-    error(e) {
-      console.log(e.detail)
-    },
-
-    supplierEntry: function () {
-        wx.navigateTo({
-            url: '/pages/supplierEntry/supplierEntry',
-        })
-    },
-
     goToSearch: function () {
         wx.navigateTo({
             url: "/pages/search/search",
@@ -112,7 +42,30 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      let _this = this;
+      wx.request({
+        url: 'https://maimai.cn/search/feeds?query='+_this.data.keyword+'&limit=40&offset=20&searchTokens=%5B%22java%22%5D&highlight=true&sortby=&u=226445063&channel=www&version=4.0.0&_csrf=GEQpMfra-CiZZibgtdCM046WZQY9FOOFxAS4&access_token=1.68522476831decf8e5c3eb2b88a0f322&uid="Zc2vesfNcjcamw%2FPjAFwZfAirs3A3wL6ApgZu%2Fo1crA%3D"&token="3vVWZ9Cd9fstmh2geiWF1D5BvZ02rY2Ms19v3RtnDRjHlvhqoasA3w6wzflkAugJ8CKuzcDfAvoCmBm7%2BjVysA%3D%3D"&jsononly=1',
+        success(res) {
+          let logs = [];
+          res.data.data.feeds.forEach((value,index) => {
+            let log = {};
+            log.avatar = value.contact.avatar;
+            log.skill = value.contact.career;
+            log.company = value.contact.company;
+            log.name = value.contact.name;
+            log.province = value.contact.province;
+            log.message = value.feed.text;
+            log.zanNum = value.feed.likes;
+            log.commentNum = value.feed.total_cnt;
+            logs.push(log);
+          })
 
+          _this.setData({
+            messages: logs
+          })
+
+        }
+      })
     },
 
     /**
