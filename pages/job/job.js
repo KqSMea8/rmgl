@@ -49,14 +49,39 @@ Page({
 
   goToDetail: function (e) {
     wx.navigateTo({
-      url: '/pages/jobDetail/jobDetail',
+      url: '/pages/jobDetail/jobDetail?id='+e.currentTarget.dataset.idx,
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this;
+    wx.request({
+      url: 'http://47.102.152.51:8080/Entity/U433103f159a5b6/group1/Job/',
+      success(res) {
+        let jobs = [];
+        res.data.Job.forEach((value) => {
+          let job = {};
+          job.id = value.id;
+          job.name = value.jobname;
+          job.companyName = value.j2c.companyname;
+          job.companyStatus = value.j2c.companystatus;
+          job.workerNum = value.j2c.workernum;
+          job.position = value.position;
+          job.experience = value.experience;
+          job.education = value.education;
+          job.salary = value.salary;
+          job.person = value.j2r.name;
+          job.identity = value.j2r.position;
+          job.img = value.j2c.imgurl;
+          jobs.push(job);
+        })
+        _this.setData({
+          jobs: jobs,
+        })
+      }
+    })
   },
 
   /**

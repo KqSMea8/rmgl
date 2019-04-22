@@ -1,6 +1,6 @@
 <template name='jobCard'>
   <wxs src="../../utils/subutil.wxs" module="tools"/>
-  <view class='part' bindtap='goToDetail'>
+  <view class='part' bindtap='goToDetail' data-idx="{{id}}">
     <view class='subPart'>
       <view style="display: flex; padding: 15px 0px">
         <image class='supplierImg' src='{{img}}'></image>
