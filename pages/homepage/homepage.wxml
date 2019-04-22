@@ -1,7 +1,7 @@
 <import src="/templates/messageCard/messageCard"/>
 <scroll-view>
   <view style="display: flex; padding: 15px 20px">
-    <view style="font-size: 24rpx;line-height: 40rpx;">根据你关注的主题 Java面试 进行的推荐</view>
+    <view bindtap='toReg' style="font-size: 24rpx;line-height: 40rpx;">根据你关注的主题 Java面试 进行的推荐</view>
   </view>
   <view class="division"/>
   <view wx:for = "{{messages}}" wx:key = "key">

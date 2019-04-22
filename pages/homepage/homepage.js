@@ -56,6 +56,12 @@ Page({
       })
     },
 
+    toReg:function(){
+      wx.navigateTo({
+        url: '/pages/register/register',
+      })
+    },
+
     scanTest: function (e) {
       let _this = this
       wx.scanCode({

@@ -4,6 +4,9 @@
     "pages/recruit/employees/employees",
     "pages/personal/personal",
     "pages/recruit/recruit",
+    "pages/contactList/contactList",
+    "pages/register/register",
+    "pages/register/job/job",
 
     "pages/jobDetail/jobDetail",
     "pages/job/job",
@@ -26,6 +29,12 @@
         "text": "动态",
         "iconPath": "resources/images/tabBar/homepage0.png",
         "selectedIconPath": "resources/images/tabBar/homepage1.png"
+      },
+      {
+        "pagePath": "pages/contactList/contactList",
+        "text": "消息",
+        "iconPath": "resources/images/tabBar/news0.png",
+        "selectedIconPath": "resources/images/tabBar/news1.png"
       },
       {
         "pagePath": "pages/personal/personal",
