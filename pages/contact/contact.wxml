@@ -1,0 +1,52 @@
+<!--pages/index/to_news/to_news.wxml-->
+<view class='tab'>
+  <view style="display: flex; padding: 15px 20px;width:80%">
+    <image class='supplierImg' src='{{img}}'></image>
+    <view class="job-info" style="width: 60%">
+      <view style='font-size:30rpx;color: black; font-weight: 700' class='lineContainer'>{{name}}</view>
+      <view style="font-size: 22rpx;color: #6B6B6B;line-height: 40rpx;">{{companyName}} | {{companyStatus}} | {{workerNum}}</view>
+      <view style="font-size: 22rpx;color: #6B6B6B">{{position}} {{education}} {{experience}}</view>
+    </view>
+    <view class="job-salary">
+      <text style="font-size: 30rpx;color: #FE7200">{{salary}}</text>
+    </view>
+  </view>
+
+
+</view>
+<view class='news'>
+  <view class='xiahuaxian1 xiahuaxia'></view>
+  <view class='new_top_txt'>您正在与{{tabdata.nickname}}进行沟通</view>
+  <view class="historycon">
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="history" wx:for="{{centendata}}" wx:key=''>
+      <view>
+        <text class='time'>{{item.time}}</text>
+      </view>
+      <block wx:if="{{item.is_show_right ==1}}">
+        <view class='my_right'>
+          <view class='page_row'>
+            <image class='new_img' wx:if='{{item.show_rignt == "是自己的内容，显示在右边，右边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
+             <view wx:if='{{!item.is_img}}' class='sanjiao my'></view>
+            <text wx:if='{{!item.is_img}}' class='new_txt'>{{item.content}}</text>
+            <image wx:if='{{item.is_img}}' src='http://sz800800.cn/Uploads/{{item.content}}' class='new_imgtent'></image>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='you_left'>
+          <view class='page_row'>
+            <text wx:if='{{!item.is_img}}' class='new_txt'>{{item.content}}</text>
+            <image wx:if='{{item.is_img}}' src='http://sz800800.cn/Uploads/{{item.content}}' class='new_imgtent'></image>
+            <view wx:if='{{!item.is_img}}' class='sanjiao you'></view>
+            <image class='new_img' wx:if='{{item.show_rignt == "不是自己的内容，显示在左边，左边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<view class='hei' id="hei"></view>
+<view class="sendmessage">
+  <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="" />
+  <button catchtap="add">发送</button>
+</view>

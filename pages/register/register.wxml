@@ -1,0 +1,36 @@
+<view style="width:100%;display:flex;flex-direction:column;align-items:center">
+  <view style='width:500rpx;font-size:40rpx;margin-top:40rpx'>
+    注册
+  </view>
+  <view style='width:500rpx;font-size:30rpx;margin-top:5rpx'>请先创建你的名片，让大家快读了解你
+  </view>
+  <view class='input-box'>
+    <input bindinput='inputname' value="{{name}}" placeholder='真实姓名'></input>
+  </view>
+  <view class='input-box' bindtap='a'>
+    <input value="{{job}}" placeholder='选择行业' ></input>
+    <image src='/resources/images/right.png'></image>
+  </view>
+  <view class='input-box'>
+    <input bindinput='inputplace' value="{{place}}" placeholder='地区'></input>
+  </view>
+  <view class='input-box' bindtap='b'>
+    <input value="{{edu}}" placeholder='学历' ></input>
+    <image src='/resources/images/right.png'></image>
+  </view>
+  <view class='input-box'>
+    <input bindinput='inputschool' value="{{school}}" placeholder='学校' ></input>
+  </view>
+  <view style='margin-top:40rpx;font-size:35rpx;width:500rpx;'>
+    <view>自我介绍</view>
+    <textarea wx:if="{{ehidden}}" bindinput='inputwords' value="{{words}}" style='width:460rpx;height:300rpx;padding:20rpx;background: #ccf;border-radius:10rpx' placeholder='用几句话简明扼要地描述一下你自己吧。可以是你的人生态度，经历概述，特长爱好，性格特点以及业务介绍'></textarea>
+  </view>
+  <view bindtap='ok' class="btn">提交
+  </view>
+</view>
+
+<action-sheet  hidden="{{ehidden}}" bindchange="echange">
+  <cover-view style='margin-left:40rpx;height:80rpx;line-height:80rpx;border-bottom:1rpx solid #cdcdcd' bindtap='chooseEdu' wx:for="{{edus}}" wx:for-index="index" wx:key="key" data-item="{{item}}">
+    {{item}}
+  </cover-view>
+</action-sheet>

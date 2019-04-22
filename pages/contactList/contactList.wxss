@@ -1,0 +1,69 @@
+
+.contact{
+  height:170rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .avatar{
+  width:170rpx;
+  height:170rpx;
+  position: relative;
+}
+
+.contact .avatar image{
+  height:130rpx;
+  width:130rpx;
+  margin: 20rpx;
+  display: block;
+  position: absolute
+}
+
+.contact .avatar .dot{
+  position: absolute;
+  z-index: 1;
+  width:50rpx;
+  border-radius: 50rpx;
+  background: red;
+  text-align: center;
+  color:white;
+  right:0rpx;
+}
+
+.contact .detail{
+  display: flex;
+  flex-direction: column;
+  width:580rpx;
+  height: 100%;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.contact .detail .name-time{
+  display: flex;
+  flex-direction: row;
+  width:580rpx;
+  margin-top:30rpx;
+  margin-bottom:10rpx;
+}
+
+.contact .detail .name-time .name{
+  font-size: 38rpx;
+  font-weight: 600;
+  width:430rpx;
+}
+
+.contact .detail .name-time .time{
+  font-size: 28rpx;
+  width:150rpx;
+  text-align: right;
+  color:#464646;
+}
+
+.contact .detail .msg{
+  width:500rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:33rpx;
+  color:#464646
+}

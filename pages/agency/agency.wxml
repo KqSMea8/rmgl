@@ -1,0 +1,37 @@
+<scroll-view class="status_list" scroll-x scroll-with-animation scroll-left="{{row_scrollTop}}">
+  <view wx:for="{{type_list}}" class="{{curStatus===index?'selected_status':'status_item'}}" data-index='{{index}}' data-id='{{index}}' bindtap='selectStatus' wx:key="key" wx:for-index="index">{{item.title}}</view>
+</scroll-view>
+<view style="padding: 5px 0;margin: 10px 1px;wxcs_style_margin: 20rpx 0;border-bottom: 5px solid #eeeeee;" wx:for="{{recommandItems}}" wx:key="key">
+  <view class='customize'>
+    <image mode='aspectFill' class='customizeImg' src='{{item.img}}'></image>
+    <view class='content'>
+      <text>【{{item.label}}】{{item.title}}</text>
+      <view class='price'>
+        <view class='priceLabel'>
+          <view>出价</view>
+          <view style="line-height: 15rpx;">RMB</view>
+        </view>
+        <text class='priceValue'>{{item.price[0]}} - {{item.price[1]}}</text>
+      </view>
+      <view style="display: flex;align-items:flex-end;">
+        <view>
+          <view class='sub-info'>{{item.num}}</view>
+          <view class='sub-info'>{{item.time}}</view>
+          <view class='sub-info'>在招职位 {{item.supplierNum}}</view>
+        </view>
+        <button hidden="{{selectedNum == 0}}" data-idx='{{index}}' bindtap='changeStatus' class="{{item.status==0?'button':''}}" disabled='{{item.status==1}}'>{{item.status==0?'应募':'已应募'}}</button>
+        
+      </view>
+    </view>
+  </view>
+  <view class='related'>
+    <text>其他职位</text>
+    <view class='relatedList'>
+      <view wx:for="{{item.related}}" wx:for-index="idx" wx:for-item="relatedItem" wx:key="idx">
+        <image style="width:150rpx" src='{{relatedItem.img}}'></image>
+        <view  style="width:150rpx;overflow:hidden">{{relatedItem.title}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>

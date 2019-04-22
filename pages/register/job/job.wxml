@@ -1,0 +1,17 @@
+<view  wx:for="{{jobs}}" wx:for-index="index" wx:key="key">
+  <view class="job {{curIndex===index?'job-on':''}}" data-index="{{index}}" bindtap='choose'>
+    <view class="title">{{item.title}}</view>
+    <view class="children">{{item.children}}</view>
+  </view>
+  <view wx:if="{{curIndex===index}}">
+    <view wx:for="{{curJob}}" wx:for-item="jitem" wx:for-index="jindex" wx:key="jkey">
+      <view class='cjob {{curJindex===jindex?"job-on":""}}' bindtap="choosej" data-jindex="{{jindex}}" >{{jitem}}</view>
+    </view>
+  </view>
+  <view>
+  </view>
+</view>
+<view style='width:100%;display:flex;align-items:center;justify-content:center'>
+<view bindtap='ok' class="btn">完成
+</view>
+</view>

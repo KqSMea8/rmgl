@@ -1,0 +1,15 @@
+<view>
+  <view bindtap='goin' class="contact" wx:for="{{clist}}" wx:for-index="index" wx:key="key">
+    <view class="avatar">
+      <image src="{{item.avatar}}"></image>
+      <view class='dot' wx:if="{{item.msgNum!=0}}">{{item.msgNum}}</view>
+    </view>
+    <view class="detail">
+      <view class="name-time">
+        <view class='name'>{{item.name}}</view>
+        <view class='time'>{{item.lastTime}}</view>
+      </view>
+      <view class="msg">{{item.lastMsg}}</view>
+    </view>
+  </view>
+</view>
