@@ -38,6 +38,7 @@
         <view class="li-bd">我的动态</view>
         <view class="li-image"><image src="{{right}}"/></view>
     </navigator>
+    <view class="division"/>
 </view>
 </scroll-view>
 
