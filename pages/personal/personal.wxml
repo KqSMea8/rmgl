@@ -1,3 +1,4 @@
+<scroll-view>
 <view class="profile">
     <view class="avatar">
         <image src="{{avatar}}"></image>
@@ -38,6 +39,6 @@
         <view class="li-image"><image src="{{right}}"/></view>
     </navigator>
 </view>
-
+</scroll-view>
 
 
