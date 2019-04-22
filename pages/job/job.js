@@ -59,6 +59,7 @@ Page({
     let _this = this;
     wx.request({
       url: 'http://47.102.152.51:8080/Entity/U433103f159a5b6/group1/Job/',
+      
       success(res) {
         let jobs = [];
         res.data.Job.forEach((value) => {
@@ -76,6 +77,7 @@ Page({
           job.identity = value.j2r.position;
           job.img = value.j2c.imgurl;
           jobs.push(job);
+          console.log(job)
         })
         _this.setData({
           jobs: jobs,
